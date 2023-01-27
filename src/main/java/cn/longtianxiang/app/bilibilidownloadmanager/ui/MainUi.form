@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="cn.longtianxiang.app.bilibilidownloadmanager.ui.MainUi">
+  <grid id="27dc6" binding="rootPane" layout-manager="BorderLayout" hgap="0" vgap="0">
+    <constraints>
+      <xy x="20" y="20" width="967" height="642"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <splitpane id="588b7">
+        <constraints border-constraint="Center"/>
+        <properties>
+          <dividerLocation value="190"/>
+          <dividerSize value="6"/>
+        </properties>
+        <border type="empty">
+          <size top="0" left="7" bottom="7" right="7"/>
+        </border>
+        <children>
+          <tabbedpane id="d5ed4" binding="tabbedPaneTask">
+            <constraints>
+              <splitpane position="left"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <scrollpane id="4aa49" binding="scrollPaneTaskTree" custom-create="true">
+                <constraints>
+                  <tabbedpane title="任务"/>
+                </constraints>
+                <properties/>
+                <border type="none">
+                  <title-color color="-4473925"/>
+                  <size top="3" left="0" bottom="0" right="0"/>
+                  <color color="-4473925"/>
+                </border>
+                <children>
+                  <component id="2324d" class="javax.swing.JTree" binding="treeTask" custom-create="true">
+                    <constraints/>
+                    <properties>
+                      <largeModel value="false"/>
+                      <rootVisible value="false"/>
+                      <rowHeight value="30"/>
+                    </properties>
+                    <clientProperties>
+                      <JTree.lineStyle class="java.lang.String" value=""/>
+                    </clientProperties>
+                  </component>
+                </children>
+              </scrollpane>
+              <grid id="3b60" layout-manager="BorderLayout" hgap="0" vgap="0">
+                <constraints>
+                  <tabbedpane title="自动"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children/>
+              </grid>
+            </children>
+          </tabbedpane>
+          <scrollpane id="2844d" binding="scrollPaneTable" custom-create="true">
+            <constraints>
+              <splitpane position="right"/>
+            </constraints>
+            <properties/>
+            <border type="none">
+              <size top="5" left="0" bottom="0" right="0"/>
+            </border>
+            <children/>
+          </scrollpane>
+        </children>
+      </splitpane>
+    </children>
+  </grid>
+</form>
