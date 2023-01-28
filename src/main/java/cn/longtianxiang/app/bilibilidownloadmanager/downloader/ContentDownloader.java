@@ -31,7 +31,7 @@ public class ContentDownloader {
                 .addHeader("connection", CONNECTION);
     }
 
-    public void request(){
+    public void get(){
         httpResult = sHttpTask.get();
     }
 

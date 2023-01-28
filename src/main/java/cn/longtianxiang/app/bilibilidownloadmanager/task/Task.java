@@ -5,7 +5,6 @@ import cn.longtianxiang.app.bilibilidownloadmanager.downloader.ProcessListener;
 import cn.longtianxiang.app.bilibilidownloadmanager.jsonmapper.PlayUrl;
 import cn.longtianxiang.app.bilibilidownloadmanager.jsonmapper.VideoDetail;
 import cn.longtianxiang.app.bilibilidownloadmanager.ui.TaskDialog;
-import cn.longtianxiang.app.bilibilidownloadmanager.util.Utils;
 import cn.zhxu.okhttps.Process;
 
 import javax.swing.*;
@@ -62,7 +61,7 @@ public class Task {
         List<ContentDownloader> contentDownloaders = DownloadersGetter.get(pathUrlPair);
         AtomicLong totalLength = new AtomicLong();
         contentDownloaders.forEach(contentDownloader -> {
-            contentDownloader.request();
+            contentDownloader.get();
             totalLength.addAndGet(contentDownloader.getLength());
         });
         taskDialog.showTotal(totalLength.get());
